@@ -35,28 +35,28 @@ export function Navbar() {
             ))}
           </div>
           <div className="flex items-center gap-4">
-            <Button variant="ghost" nativeButton={false} render={<Link href="/login" />} className="h-[58px] w-[106px]">Log in</Button>
+            <Button variant="ghost" nativeButton={false} render={<Link href="/login" />} className="h-[58px] w-[106px] bg-transparent transition-colors duration-300 hover:bg-transparent hover:text-primary focus-visible:bg-transparent">Log in</Button>
             <Button nativeButton={false} render={<Link href="/post-job" />} className="h-[52px] w-[143px]">Post a Job</Button>
           </div>
         </div>
 
         <div className="lg:hidden">
           <Sheet>
-            <SheetTrigger aria-label="Open menu" className="rounded-md p-2 text-foreground hover:bg-accent focus-visible:outline-2 focus-visible:outline-ring">
+            <SheetTrigger aria-label="Open menu" className="rounded-md p-2 text-foreground transition-[color,background-color,transform] duration-200 ease-out hover:rotate-90 hover:bg-accent hover:text-primary active:scale-90 focus-visible:outline-2 focus-visible:outline-ring motion-reduce:transition-none">
               <Menu className="size-6" />
             </SheetTrigger>
             <SheetContent>
               <SheetTitle className="pr-10 text-xl font-semibold">Menu</SheetTitle>
               <div className="mt-8 flex flex-col gap-2">
                 {navLinks.map((link) => (
-                  <SheetClose key={link.href} nativeButton={false} render={<Link href={link.href} />} className="rounded-md px-3 py-3 text-base text-foreground hover:bg-accent">
+                  <SheetClose key={link.href} nativeButton={false} render={<Link href={link.href} />} className="rounded-md px-3 py-3 text-base text-foreground transition-[color,background-color,transform] duration-200 ease-out hover:bg-accent hover:text-primary active:scale-[0.98] motion-reduce:transition-none">
                     {link.label}
                   </SheetClose>
                 ))}
               </div>
               <div className="mt-auto flex flex-col gap-3 border-t border-border pt-6">
-                <SheetClose nativeButton={false} render={<Link href="/login" />} className="rounded-md px-3 py-2 text-center text-foreground hover:bg-accent">Log in</SheetClose>
-                <SheetClose nativeButton={false} render={<Link href="/post-job" />} className="rounded-md bg-primary px-3 py-2 text-center font-medium text-primary-foreground hover:bg-primary/80">Post a Job</SheetClose>
+                <SheetClose nativeButton={false} render={<Link href="/login" />} className="rounded-md px-3 py-2 text-center text-foreground transition-[color,background-color,transform] duration-200 ease-out hover:bg-accent hover:text-primary active:scale-[0.98] motion-reduce:transition-none">Log in</SheetClose>
+                <SheetClose nativeButton={false} render={<Link href="/post-job" />} className="rounded-md bg-primary px-3 py-2 text-center font-medium text-primary-foreground transition-[background-color,transform] duration-200 ease-out hover:bg-primary/80 active:scale-[0.98] motion-reduce:transition-none">Post a Job</SheetClose>
               </div>
             </SheetContent>
           </Sheet>
