@@ -1,9 +1,22 @@
-<!-- BEGIN:nextjs-agent-rules -->
+# HireLoop Client
 
-## This is NOT the Next.js you know
+Next.js (App Router) + TypeScript + Tailwind CSS + shadcn/ui (Base UI version, not Radix).
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+## Commands
 
-This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+- `npm run dev` / `npm run lint` / `npm run build`
 
-<!-- END:nextjs-agent-rules -->
+## Rules
+
+- TypeScript only, never use `any`
+- Code lives in `src/`: components/, lib/, hooks/, types/
+- Server Components by default, use 'use client' only when needed
+- Use shadcn components first (`npx shadcn@latest add <name>`), do not build custom ones
+- Do not edit files in `src/components/ui/` unless necessary
+- Ask me before installing any new package
+- Do one task at a time, list changed files at the end
+- Run `npm run lint` when done
+
+## Docs (read only the relevant section, not the whole file)
+
+- ../docs/Project_requirements.md
