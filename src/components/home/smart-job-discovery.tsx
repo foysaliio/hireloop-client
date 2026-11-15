@@ -35,6 +35,7 @@ export function SmartJobDiscovery() {
           {jobs.map(({ id }) => (
             <Card
               key={id}
+              variant="glow"
               className="min-h-[364px] gap-0 rounded-[24px] bg-gradient-to-b from-card to-popover/80 pb-10 pt-8 ring-border/50"
             >
               <CardHeader className="gap-4 px-6">
