@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Manrope, Space_Mono } from "next/font/google";
 import { ArrowRight, BriefcaseBusiness, CircleEuro, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const manrope = Manrope({ subsets: ["latin"], weight: ["400", "600"] });
@@ -76,6 +77,15 @@ export function SmartJobDiscovery() {
               </div>
             </Card>
           ))}
+        </div>
+        <div className="mt-10 flex justify-center">
+          <Button
+            nativeButton={false}
+            render={<Link href="/jobs" />}
+            className="h-auto rounded-xl bg-foreground px-6 py-4 text-lg font-medium text-background hover:bg-foreground/90"
+          >
+            View all job open
+          </Button>
         </div>
       </div>
     </section>
