@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { Manrope, Space_Mono } from "next/font/google";
+import { Manrope } from "next/font/google";
 import { ArrowRight, BriefcaseBusiness, CircleEuro, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { SectionLabel } from "@/components/home/section-label";
 
 const manrope = Manrope({ subsets: ["latin"], weight: ["400", "600"] });
-const spaceMono = Space_Mono({ subsets: ["latin"], weight: "400" });
 
 const jobs = Array.from({ length: 6 }, (_, index) => ({ id: index + 1 }));
 
@@ -17,13 +17,7 @@ export function SmartJobDiscovery() {
     >
       <div className="mx-auto w-full max-w-[1320px]">
         <div className="flex flex-col items-center gap-4 text-center">
-          <div className="flex items-center gap-4">
-            <span aria-hidden="true" className="size-2 bg-primary" />
-            <p className={`${spaceMono.className} text-sm uppercase leading-[1.2] text-foreground/80 sm:text-xl`}>
-              Smart job discovery
-            </p>
-            <span aria-hidden="true" className="size-2 bg-primary" />
-          </div>
+          <SectionLabel>Smart job discovery</SectionLabel>
           <h2
             id="smart-job-discovery-title"
             className={`${manrope.className} max-w-[488px] text-4xl font-semibold leading-[1.15] tracking-[-0.02em] text-foreground sm:text-5xl`}
